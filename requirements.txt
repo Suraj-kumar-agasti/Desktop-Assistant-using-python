@@ -1,6 +1,8 @@
-SpeechRecognisation
+SpeechRecognition
 pyttsx3
-PyAudio
+PyAudio 
+wikipedia
+
 
 
 
