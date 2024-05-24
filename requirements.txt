@@ -1,0 +1,6 @@
+SpeechRecognisation
+pyttsx3
+PyAudio
+
+
+
