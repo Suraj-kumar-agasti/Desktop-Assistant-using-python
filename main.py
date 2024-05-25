@@ -2,6 +2,7 @@ import pyttsx3
 import speech_recognition as sr
 import datetime
 import wikipedia
+import webbrowser
 import os
 
 # taking voice from my system
@@ -46,8 +47,25 @@ def takecommand():
             return "none"
         return query
     
-text = takecommand()
-speak(text)
+
+if __name__ == "__main__":
+
+    query = takecommand().lower()
+    print(query)
+
+    if "wikipedia" in query:
+        speak("Searching wikipedia")
+        query = query.replace("wikipedia","")
+        results = wikipedia.summary(query, sentenses = 2)
+        speak("According to wikipedia")
+        print(results)
+        speak(results)
+
+    elif "youtube" in query:
+        speak("opening youtube")
+        webbrowser.open("youtube.com")
+        
+
 
 
 
