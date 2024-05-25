@@ -25,9 +25,6 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
-speak("hello I am a programmer, how are you ? ")
-
-
 
 # speech recognition
 def takecommand():
@@ -47,8 +44,6 @@ def takecommand():
             return "none"
         return query
     
-# THe function for wish me by using time
-
 def wish_me():
     hour = (datetime.datetime.now().hour)
     if hour >=0 and hour<12:
@@ -58,41 +53,3 @@ def wish_me():
     else:
         speak("Good evening sir. How are you doing")
     speak("I am Jarvis. Tell mehow can I help you ?")
-
-
-if __name__ == "__main__":
-
-    wish_me()
-
-    query = takecommand().lower()
-    
-    
-    if "wikipedia" in query:
-        speak("Searching wikipedia")
-        query = query.replace("wikipedia", "")
-        results = wikipedia.summary(query, sentences=2)
-        speak("According to wikipedia")
-        print(results)
-        speak(results)
-
-    elif "youtube" in query:
-        speak("opening youtube")
-        webbrowser.open("youtube.com")
-
-    elif "google" in query:
-        speak("opening google")
-        webbrowser.open("google.com")
-
-    elif "github" in query:
-        speak("opening github")
-        webbrowser.open("github.com")
-
-    elif "time" in query:
-        strTime = datetime.datetime.now().strftime("%H:%M:%S")
-        speak(f"sir the time is {strTime}")
-
-    elif "good bye" in query:
-        speak("ok sir. I am always here for you. bye bye")
-        exit()
-    
-        
