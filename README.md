@@ -14,3 +14,4 @@ conda activate assistant
 
 4.Install all the packages present in the requirements
 pip install -r requirements.txt
+

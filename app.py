@@ -3,11 +3,14 @@ import datetime
 import wikipedia
 import webbrowser
 import os
+import streamlit as st
 
 if __name__ == "__main__":
     wish_me()
 
     while True:
+        st.title("Desktop Assistant System")
+        
         query = takecommand().lower()
     
         if "wikipedia" in query:
