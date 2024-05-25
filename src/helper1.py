@@ -36,7 +36,7 @@ def text_to_speech(text):
     tts.save("speech.mp3")
 
 def llm_model_object(user_text):
-    genai.config(api_key = GOOGLE_API_KEY)
+    genai.configure(api_key = GOOGLE_API_KEY)
 
     model = genai.GenerativeModel('gemini-pro')
     response = model.generate_content(user_text)
